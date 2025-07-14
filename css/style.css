@@ -148,6 +148,7 @@ body {
     .container-fluid .education-header,
     .container-fluid .skills-header,
     .container-fluid .interest-header,
+     .container-fluid .testimonial-header
     .container-fluid .portfolio-header,
     .container-fluid .contact-header {
         padding: 25px;
@@ -159,6 +160,7 @@ body {
     .container-fluid .skills-content,
     .container-fluid .interest-content,
     .container-fluid .portfolio-content,
+     .container-fluid .testimonial-content,
     .container-fluid .contact-content {
         padding-left: 0;
         padding-top: 25px;
@@ -372,7 +374,103 @@ body {
 /*** Portfolio End ***/
 
 
+/*** Testimonial Start ***/
+.testimonial-carousel {
+    position: relative;
+    transition: 0.5s;
+}
 
+.testimonial-carousel .testimonial-item {
+    padding: 60px;
+}
+
+.testimonial-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bs-white);
+    color: var(--bs-primary);
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bs-white);
+    color: var(--bs-primary);
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.testimonial-carousel .owl-dots {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px 60px 60px;
+    transition: 0.5s;
+}
+
+@media (max-width: 576px) {
+    .testimonial-carousel .owl-dots {
+        justify-content: start;
+    }
+}
+
+.testimonial-carousel .owl-dots .owl-dot img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border: 3px solid var(--bs-white);
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--bs-primary);
+
+}
+
+    
+.testimonial-inner-img {
+    border-radius: 50%; /* Optional: matches circular styling */
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 3px solid var(--bs-primary); /* Keeps your border consistent */
+    margin-right: 1rem; /* Matches the "me-4" */
+    border-radius: 0; /* Ensures rectangular shape */
+}
+
+.testimonial-inner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0; /* No curves - keep it rectangular */
+}
+
+/*** Testimonial End ***/
 
 
 /***certifications***/
